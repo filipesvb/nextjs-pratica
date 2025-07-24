@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    background-color: #1a1d22;
+}
+
+.app-container {
+    width: 1200px;
+    max-width: 90%;
+    margin: 56px auto;
+    display: flex;
+    gap: 28px;
+    height: 100vh;
+}
