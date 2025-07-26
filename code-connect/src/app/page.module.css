@@ -1,15 +1,15 @@
 .grid {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .links {
-    text-align: center;
-    flex-grow: 1;
+  text-align: center;
+  flex-grow: 1;
 }
 
 .links a {
-    margin: 0 8px;
+  margin: 0 8px;
 }
