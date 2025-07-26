@@ -1,6 +1,16 @@
 .aside {
-    padding: 3.2rem 1.2rem;
-    border-radius: 8px;
-    background-color: #2b3547;
-    height: 100%;
+  padding: 1.2rem 1.2rem;
+  border-radius: 8px;
+  background-color: #2b3547;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.aside img {
+  position: relative;
+  min-width: 120px;
+  min-height: 90px;
 }
