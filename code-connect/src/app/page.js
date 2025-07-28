@@ -27,11 +27,11 @@ async function getAllPosts(page, searchTerm) {
       take: perPage,
       skip,
       where,
-      orderBy: { createdAt: "desc" },
+      orderBy: { id: "desc" },
       include: {
         author: true,
       },
-    });
+    },);
     return { data: posts, prev, next };
   } catch (error) {
     logger.error("Não foi possível buscar os posts", { error });
