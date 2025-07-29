@@ -10,6 +10,13 @@ const nextConfig = {
       },
     ],
   },
+  experimental: {
+    
+
+    // ⚠️ Desativa a verificação de origem para Server Actions
+    serverActionsVerifyOrigin: false,
+
+  }
 };
 
 export default nextConfig;
