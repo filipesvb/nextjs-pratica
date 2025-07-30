@@ -46,7 +46,7 @@ export async function postReply(parent, formData) {
 
     const post = await db.post.findFirst({
         where: {
-            id: parent.id
+            id: parent.postId
         }
     })
 

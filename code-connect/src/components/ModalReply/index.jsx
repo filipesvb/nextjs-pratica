@@ -1,13 +1,10 @@
 'use client'
 
 import { useRef } from "react"
-import { IconButton } from "../IconButton"
-import { Chat } from "../icons/Chat"
 import { Modal } from "../Modal"
 import { SubmitButton } from "../SubmitButton"
 import { postReply } from "@/actions"
 import styles from "./modalreply.module.css";
-import { SubHeading } from "../SubHeading"
 import { Textarea } from "../Textarea"
 import { TextButton } from "../TextButton"
 import { Comment } from "../Comment"

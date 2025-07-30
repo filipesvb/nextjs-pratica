@@ -18,13 +18,11 @@ export const CommentList = ({ comments }) => {
             <ul className={styles.commentList}>
             
                     {comments.map(comment => {
-                        const submitReply = postReply.bind(null, comment.id);
-
                         return (
                             <li  key={comment.id} >
                                 <Comment comment={comment}/>
                                 <ModalReply comment={comment} />
-                                <Replies />
+                                <Replies comment={comment} />
                             </li>
                         )
                     }
