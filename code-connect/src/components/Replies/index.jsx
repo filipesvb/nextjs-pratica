@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import styles from './replies.module.css'
+import { ModalReply } from '../ModalReply';
 
 export const Replies = ({ comment }) => {
 
@@ -31,7 +32,7 @@ export const Replies = ({ comment }) => {
             {showReplies && <ul>
                 {replies.map(reply => <li key={reply.id}>
                     <Comment comment={reply} />
-                    <ReplyModal comment={reply} />
+                    <ModalReply comment={reply} />
                 </li>)}
             </ul>}
         </div>
