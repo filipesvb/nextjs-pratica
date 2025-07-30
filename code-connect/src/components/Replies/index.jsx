@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import styles from './replies.module.css'
 import { ModalReply } from '../ModalReply';
+import { Comment } from '../Comment';
 
 export const Replies = ({ comment }) => {
 
