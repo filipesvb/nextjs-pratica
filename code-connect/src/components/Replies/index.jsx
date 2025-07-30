@@ -10,7 +10,7 @@ export const Replies = ({ comment }) => {
 
     async function fetchData() {
         const response = await fetch(`/api/comment/${comment.id}/replies`);
-        const data = await data.json();
+        const data = await response.json();
         setReplies(data);
     }
 
