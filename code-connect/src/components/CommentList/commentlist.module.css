@@ -1,0 +1,14 @@
+.comments {
+  margin-top: 2rem;
+  background-color: #fff;
+  padding: 12px 24px;
+}
+
+.commentList {
+    list-style: none;
+    margin: none;
+    padding: 0;
+}
+.commentList li {
+    margin: 0;
+}

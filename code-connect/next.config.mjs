@@ -14,7 +14,9 @@ const nextConfig = {
     
 
     // ⚠️ Desativa a verificação de origem para Server Actions
-    serverActionsVerifyOrigin: false,
+    serverActions: {
+      allowedOrigins: ['*'],
+    },
 
   }
 };
