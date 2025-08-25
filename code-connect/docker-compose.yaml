@@ -1,6 +1,6 @@
 services:
   # 'services' define um ou mais serviços, cada um representando um contêiner.
-
+  
   postgres:
     # 'postgres' é o nome dado a este serviço. Você pode nomear o serviço como desejar.
 

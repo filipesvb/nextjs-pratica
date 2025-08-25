@@ -1,20 +1,15 @@
-'use client'
-import { useFormStatus } from "react-dom"
+'use client';
+
+import { useFormStatus } from 'react-dom'
 import { Spinner } from "../Spinner";
-import { ArrowFoward } from "../icons/ArrowForward";
-
-import styles from './modalcommentbutton.module.css'
-
+import { ArrowFoward } from "../icons/ArrowFoward";
+import { Button } from "../Button";
 
 export const SubmitButton = ({children}) => {
-
-    const {pending} = useFormStatus();
-
+    const { pending } = useFormStatus();
     return (
-        <button className={styles.button}>
-            {children}
-            {pending ? <Spinner /> : <ArrowFoward />}
-        </button>
-
+        <Button aria-disabled={pending} type="submit">
+             {pending ? <Spinner /> : <>{children} <ArrowFoward /></>}
+        </Button>
     )
 }

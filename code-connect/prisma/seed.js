@@ -1,21 +1,24 @@
-import { PrismaClient } from "@prisma/client";
+const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 async function main() {
   const author = {
     name: "Ana Beatriz",
     username: "anabeatriz_dev",
+    email: "ana@dev.com",
     avatar:
       "https://raw.githubusercontent.com/viniciosneves/code-connect-assets/main/authors/anabeatriz_dev.png",
   };
 
   const ana = await prisma.user.upsert({
     where: { username: author.username },
-    update: {},
+    update: {
+      email: "ana@dev.com",
+    },
     create: author,
   });
 
-  console.log("Autor criado:", ana);
+  console.log("Author created", ana);
 
   const posts = [
     {
@@ -140,15 +143,15 @@ async function main() {
     },
   ];
 
-  for (const post of posts) {
+  posts.forEach(async (post) => {
     await prisma.post.upsert({
       where: { slug: post.slug },
       update: {},
       create: post,
     });
-  }
+  });
 
-  console.log("Seeding OK");
+  console.log("Seed OK");
 }
 main()
   .then(async () => {

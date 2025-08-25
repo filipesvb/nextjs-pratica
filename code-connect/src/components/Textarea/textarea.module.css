@@ -1,9 +1,10 @@
 .textarea {
-    background-color: #ccc;
-    border-radius: 8px;
-    border: none;
     width: 100%;
-    resize: none;
-    outline: none;
-    padding: .5rem 1rem;
+    border-radius: 8px;
+    background-color: #BCBCBC;
+    padding: 16px;
+    color: #3E3E3F;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
 }

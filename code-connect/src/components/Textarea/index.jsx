@@ -1,7 +1,7 @@
-import styles from './textarea.module.css'
+import style from './textarea.module.css'
 
-export const Textarea = ({nome, placeholder, rows}) => {
-    return (
-        <textarea name={nome} placeholder={placeholder} className={styles.textarea} rows={rows}></textarea>
-    )
+export const Textarea = ({children, ...rest}) => {
+    return <textarea className={style.textarea} {...rest}>
+        {children}
+    </textarea>
 }

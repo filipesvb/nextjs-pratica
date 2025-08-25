@@ -1,37 +1,40 @@
 'use client'
 
-import { useRef } from "react"
-import { Modal } from "../Modal"
-import { SubmitButton } from "../SubmitButton"
-import { postReply } from "@/actions"
-import styles from "./modalreply.module.css";
-import { Textarea } from "../Textarea"
-import { TextButton } from "../TextButton"
-import { Comment } from "../Comment"
+import { useRef } from "react";
+import { Modal } from "../Modal";
 
-export const ModalReply = ({ comment }) => {
+import styles from './replymodal.module.css'
+import { Textarea } from "../Textarea";
+import { SubmitButton } from "../SubmitButton";
+import { Comment } from "../Comment";
+import { postReply } from "@/actions";
+
+export const ReplyModal = ({ comment, post }) => {
     const modalRef = useRef(null);
+
+    const openModal = () => {
+        modalRef.current.openModal();
+    };
+
     const action = postReply.bind(null, comment)
 
-    return (
-        <>
-            <Modal ref={modalRef}>
-                <form action={action} className={styles.form} onSubmit={() => { modalRef.current.closeModal() }}>
-                    <div className={styles.body}>
-                        <Comment comment={comment} />
-                    </div>
-                    <div className={styles.divider}></div>
-                    <Textarea nome="text" className={styles.textarea} rows={8} placeholder="Digite aqui..."></Textarea>
-                    <div className={styles.footer}>
-                        <SubmitButton>Responder</SubmitButton>
-                    </div>
-                </form>
-            </Modal>
-            <TextButton onClick={() => modalRef.current.openModal()}>
-                <span>
-                    Responder
-                </span>
-            </TextButton>
-        </>
-    )
+    return (<>
+        <Modal ref={modalRef}>
+            <form action={action}>
+                <div className={styles.body}>
+                    <Comment comment={comment}/>
+                </div>
+                <div className={styles.divider}></div>
+                <Textarea required rows={8} name="text" placeholder="Digite aqui..." />
+                <div className={styles.footer}>
+                    <SubmitButton>
+                        Responder
+                    </SubmitButton>
+                </div>
+            </form>
+        </Modal>
+        <button className={styles.btn} onClick={openModal}>
+            Responder
+        </button>
+    </>)
 }

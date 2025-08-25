@@ -10,6 +10,5 @@ export async function GET (_request, { params }) {
             author: true
         }
     })
-
     return Response.json(replies)
-} 
+}

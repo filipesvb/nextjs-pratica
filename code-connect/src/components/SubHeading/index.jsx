@@ -1,9 +1,5 @@
-import styles from "./subheading.module.css"
+import styles from './subheading.module.css'
 
-export const SubHeading = ({children}) => {
-    return (
-        <h2 className={styles.h2}>
-            {children}
-        </h2>
-    )
+export const Subheading = ({children}) => {
+    return <h2 className={styles.subheading}>{children}</h2>
 }

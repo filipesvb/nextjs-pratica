@@ -1,18 +1,19 @@
 'use client'
 
-import { forwardRef, useImperativeHandle, useRef } from "react";
-import styles from "./modal.module.css"
+import { forwardRef, useImperativeHandle, useRef } from "react"
 
-export const Modal = forwardRef(({children}, ref) => {
+import styles from './modal.module.css'
 
-    const dialogRef = useRef(null);
+export const Modal = forwardRef(({ children }, ref) => {
+
+    const dialogRef = useRef(null)
 
     const closeModal = () => {
-        dialogRef.current.close();
+        dialogRef.current.close()
     }
 
     const openModal = () => {
-        dialogRef.current.showModal();
+        dialogRef.current.showModal()
     }
 
     useImperativeHandle(ref, () => {
@@ -22,12 +23,12 @@ export const Modal = forwardRef(({children}, ref) => {
         }
     })
 
-    return (
-        <dialog ref={dialogRef} className={styles.dialog}>
-            <header className={styles.header}>
-                <button onClick={() => closeModal()}>x</button>
-            </header>
-            {children}
-        </dialog>
-    )
+    return (<dialog className={styles.dialog} ref={dialogRef}>
+        <header className={styles.header}>
+            <button onClick={closeModal}>
+                X
+            </button>
+        </header>
+        {children}
+    </dialog>)
 })

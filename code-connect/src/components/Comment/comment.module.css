@@ -1,5 +1,11 @@
 .comment {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.comment p {
+  margin: 0;
+}
+.image {
+  border-radius: 50%;
 }
