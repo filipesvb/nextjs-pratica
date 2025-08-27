@@ -8,7 +8,7 @@ import { Textarea } from "../Textarea"
 
 import styles from './commentmodal.module.css'
 import { SubmitButton } from "../SubmitButton"
-import { Subheading } from "../Subheading"
+import { Subheading } from "../SubHeading"
 
 export const ModalComment = ({ action }) => {
     const modalRef = useRef(null)

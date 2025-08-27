@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Avatar } from "../Avatar";
-import styles from "./cardpost.module.css";
+import styles from "./cardPost.module.css";
 import Link from "next/link";
 
 import { incrementThumbsUp, postComment } from "@/actions";
