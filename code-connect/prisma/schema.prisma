@@ -20,6 +20,7 @@ model User {
   comments Comment[]
   email         String?   @unique
   emailVerified DateTime?
+  password String?
   image         String?
   accounts      Account[]
   sessions      Session[]
